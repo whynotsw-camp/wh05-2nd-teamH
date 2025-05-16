@@ -33,9 +33,9 @@
     <td align="center" width="300">
       <img src="https://github.com/user-attachments/assets/b77fbacc-6bc4-4757-99ec-d52bc00d02d4" width="160" /><br />
       <b>서동겸(Team Leader)</b>
-      <div style="margin:6px 0;">──────</div>
+      <div style="margin:6px 0;">──────────────────────────────</div>
       <i>Data Engineer / Backend</i>
-      <div style="margin:6px 0;">──────</div>
+      <div style="margin:6px 0;">──────────────────────────────</div>
       <a href="https://github.com/whynotswdg" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
