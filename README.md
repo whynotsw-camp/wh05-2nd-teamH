@@ -19,12 +19,11 @@
   - 🗺 **개인별 취업 로드맵 제공**: 목표 직무에 따른 역량 단계별 제안
 
 ---
-
 ## 2. 🗂 주요 내용
 
 - 📅 **프로젝트 기간**: `2025-04-05` ~ `2025-08-02`  
 - 🧑‍💻 **개발 중심 키워드**:  
-  `채용공고 수집`  · `추천 알고리즘` · `직무 로드맵` · `대시보드 시각화`
+  `채용공고 수집` · `추천 알고리즘` · `직무 로드맵` · `대시보드 시각화`
 
 <h2 align="center">Team Members</h2>
 
@@ -32,43 +31,43 @@
   <tr>
     <td align="center" width="200">
       <img src="https://github.com/user-attachments/assets/b77fbacc-6bc4-4757-99ec-d52bc00d02d4" width="160" /><br />
-      <b>서동겸</b><br />
-      <hr style="width:60%;">
-      <i>Team Leader / Data Engineer / Backend</i><br />
-      <hr style="width:60%;">
+      <b>서동겸</b>
+      <div style="margin:6px 0;">──────</div>
+      <i>Team Leader / Data Engineer / Backend</i>
+      <div style="margin:6px 0;">──────</div>
       <a href="https://github.com/whynotswdg" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
     </td>
-    
+
     <td align="center" width="200">
       <img src="https://github.com/user-attachments/assets/e948675d-a30b-4121-9ec3-1bdbf41f3849" width="160" /><br />
-      <b>김찬호</b><br />
-      <hr style="width:60%;">
-      <i>Backend / Data Engineer / Data Scientist</i><br />
-      <hr style="width:60%;">
+      <b>김찬호</b>
+      <div style="margin:6px 0;">──────</div>
+      <i>Backend / Data Engineer / Data Scientist</i>
+      <div style="margin:6px 0;">──────</div>
       <a href="https://github.com/kkch1012" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
     </td>
-    
+
     <td align="center" width="200">
       <img src="https://github.com/user-attachments/assets/fe073da8-4e91-4475-bd27-111011ecebbd" width="160" /><br />
-      <b>이성재</b><br />
-      <hr style="width:60%;">
-      <i>Frontend / Backend</i><br />
-      <hr style="width:60%;">
+      <b>이성재</b>
+      <div style="margin:6px 0;">──────</div>
+      <i>Frontend / Backend</i>
+      <div style="margin:6px 0;">──────</div>
       <a href="https://github.com/sungjae0309" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
     </td>
-    
+
     <td align="center" width="200">
       <img src="https://github.com/user-attachments/assets/6f243740-f574-44e0-bb97-2fbbae396a5d" width="160" /><br />
-      <b>김민지</b><br />
-      <hr style="width:60%;">
-      <i>Data Scientist / Frontend</i><br />
-      <hr style="width:60%;">
+      <b>김민지</b>
+      <div style="margin:6px 0;">──────</div>
+      <i>Data Scientist / Frontend</i>
+      <div style="margin:6px 0;">──────</div>
       <a href="https://github.com/kkuni-jjang" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
@@ -76,6 +75,9 @@
   </tr>
 </table>
 
+
+
+---
 
 ## 🗓️ 3. 일정 계획
 
