@@ -369,7 +369,7 @@
 
 #### ⚠️ 개선이 필요한 점
 - keyBERT 모델 튜닝 부족 및 성능 한계
-- LLM 및 Multilingual Embedding 도입 필요
+- LLM 및 Multilingual Embedding 모델 활용으로 높은 정확도의 전처리와 유사도 계산을 할 예정
 
 #### 📚 배운 점
 - 통계 기법 외 LLM, 다국어 임베딩 모델 활용 가능성 인식
