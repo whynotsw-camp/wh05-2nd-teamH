@@ -169,18 +169,42 @@
 
 ---------------------------
 
-# 데이터 연동 정의서
+# 🧩 데이터 연동 정의서
 
 ## 1. 데이터 정의
-- 데이터 소스: 상담 이력 데이터
-- 주요 컬럼:
-  - user_id: 사용자 ID
-  - timestamp: 상담 시간
-  - feedback: 상담 내용
+
+- **데이터 소스**: 채용 공고 (JobPosting 테이블)
+- **설명**: 외부 채용 사이트에서 수집된 공고 정보를 저장 및 분석하는 핵심 테이블입니다.
+
+| 컬럼 ID             | 설명             | 타입       | 제약조건              |
+|--------------------|------------------|------------|------------------------|
+| `posting_id`       | 공고 ID          | VARCHAR    | PK, NN                |
+| `company_id`       | 회사 ID          | VARCHAR    | FK → Company(company_id), NN |
+| `job_title`        | 직무명           | VARCHAR    | NN                    |
+| `required_expert`  | 필수 경력 수준   | VARCHAR    | NN                    |
+| `required_educ`    | 필수 학력        | VARCHAR    | NN                    |
+| `employment_type`  | 고용 형태        | VARCHAR    | NN                    |
+| `salary`           | 연봉             | VARCHAR    | NN                    |
+| `posting_date`     | 공고 게시일      | DATETIME   | NN                    |
+| `closing_date`     | 공고 마감일      | DATETIME   | NN                    |
+| `responsibilities` | 주요 업무        | TEXT       |                        |
+| `qualifications`   | 자격 요건        | TEXT       |                        |
+| `preferred_qual`   | 우대 사항        | TEXT       |                        |
+
+※ NN: Not Null / PK: Primary Key / FK: Foreign Key
+
+---
 
 ## 2. 연동 방식
-- 연동 방식: API 또는 Batch 수집
-- 연동 주기: 매일 자정
+
+| 항목         | 설명                          |
+|--------------|-------------------------------|
+| 연동 방식    | Batch 수집                    |
+| 연동 대상    | 외부 채용공고 API 또는 크롤링 데이터 |
+| 연동 주기    | 매일 자정                     |
+| 적재 방식    | staging 테이블 → 정제 후 JobPosting 테이블로 이관 |
+| 예외 처리    | 마감일 경과 또는 필수값 누락 공고 제외 |
+
 
 --------------------------
 
