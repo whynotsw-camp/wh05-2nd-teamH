@@ -146,16 +146,19 @@
 
 # 프로젝트 설계서
 
-## 1. 데이터 아키텍처
-- **설계 개요**:
-  - 데이터 수집: [수집 방식]
-  - 데이터 저장: [저장 방식]
-  - 분석 및 시각화: [사용 기술]
+1.  **데이터 아키텍처**
+    * **설계 개요:**
+        * **데이터 처리 방식:** Batch 처리 (ELT: Extract, Load, Transform)
+        * **데이터 수집:** 채용 플랫폼 API를 우선하여 활용. API 미제공 시, 웹 스크래핑 도구(Python 기반 Scrapy, Selenium, BeautifulSoup)로 데이터 수집. 효율성을 위해 Scrapy를 우선하여 수집하고, 동적 웹 페이지 수집 시 Selenium을 사용.
+        * **데이터 저장:**
+            * **원시 데이터 (Data Lake):** 수집된 원시 데이터(텍스트, 이미지 등)는 AWS S3에 Parquet 또는 JSON 형식으로 저장됩니다. 이미지 파일 자체는 S3에 저장하고 관련 메타데이터를 Parquet 파일에 함께 기록.
+            * **변환된 데이터 (Data Warehouse):** 정제 및 변환 과정을 거친 데이터는 AWS Redshift(프로토타입 단계에서는 PostgreSQL 사용)에 저장되어 분석에 활용
+        * **분석 및 처리:** AWS EMR 상에서 Spark를 사용하여 대용량 데이터를 분산 처리. 이 과정에는 데이터 정제, 결측치 및 이상치 처리, 중복 제거, 자연어 처리(KeyBERT, KoBERT 등 활용으로 핵심 정보 추출 및 텍스트 벡터화), 기술 스택 표준화 포함. 전체 ELT 파이프라인의 워크플로우는 Apache Airflow로 모니터링 및 자동화.
 
-## 2. 기술 스택
-- 데이터 수집: Python, API 연동
-- 분석 및 처리: Pandas, NumPy
-- 시각화: Matplotlib, Dash
+2.  **기술 스택**
+    * **데이터 수집:** Python (Scrapy, Selenium, BeautifulSoup, Requests), 채용 플랫폼 API
+    * **분석 및 처리:** AWS S3, Boto3, AWS EMR (Spark), Python, KeyBERT, KoBERT, AWS Redshift (프로토타입: PostgreSQL), Apache Airflow
+    * **시각화 (모니터링 및 로깅 중심):** 
 
 ## 3. 설계 이미지
 ![아키텍처 다이어그램](../assets/architecture_diagram.png)
@@ -218,22 +221,48 @@
 
 ## 📌 주요 화면 캡처
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/b84e7341-a390-4e06-a775-df1df091da89" style="max-width:45%; height:auto; margin:10px;" />
-  <img src="https://github.com/user-attachments/assets/291710bb-981d-4a1a-be6f-7befdc183d3e" style="max-width:45%; height:auto; margin:10px;" />
-  <br />
-  <img src="https://github.com/user-attachments/assets/45c9fe4a-dd99-4e6f-90a3-c78108e3d7c0" style="max-width:45%; height:auto; margin:10px;" />
-  <img src="https://github.com/user-attachments/assets/b2b640f8-a253-40f2-866d-fe3b5e7984f9" style="max-width:45%; height:auto; margin:10px;" />
-  <br />
-  <img src="https://github.com/user-attachments/assets/d946675c-8062-45da-bba0-b8ea968628c7" style="max-width:45%; height:auto; margin:10px;" />
-  <img src="https://github.com/user-attachments/assets/2718ace5-e16e-4d4a-a430-9b91c21cd8d7" style="max-width:45%; height:auto; margin:10px;" />
-  <br />
-  <img src="https://github.com/user-attachments/assets/4bd392d7-6245-4e2f-a658-83e6db388525" style="max-width:45%; height:auto; margin:10px;" />
-  <img src="https://github.com/user-attachments/assets/7032f2e9-f9f3-4633-a70d-8f6dce0fbdb5" style="max-width:45%; height:auto; margin:10px;" />
-  <br />
-  <img src="https://github.com/user-attachments/assets/d713daa2-a6a8-4dc9-893c-e443bd97d7c2" style="max-width:45%; height:auto; margin:10px;" />
-  <img src="https://github.com/user-attachments/assets/9f425df3-3752-4317-aba2-34824c23eb6b" style="max-width:45%; height:auto; margin:10px;" />
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/b84e7341-a390-4e06-a775-df1df091da89" width="400" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/291710bb-981d-4a1a-be6f-7befdc183d3e" width="400" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/45c9fe4a-dd99-4e6f-90a3-c78108e3d7c0" width="400" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/b2b640f8-a253-40f2-866d-fe3b5e7984f9" width="400" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/d946675c-8062-45da-bba0-b8ea968628c7" width="400" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/2718ace5-e16e-4d4a-a430-9b91c21cd8d7" width="400" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/4bd392d7-6245-4e2f-a658-83e6db388525" width="400" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/7032f2e9-f9f3-4633-a70d-8f6dce0fbdb5" width="400" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/d713daa2-a6a8-4dc9-893c-e443bd97d7c2" width="400" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/9f425df3-3752-4317-aba2-34824c23eb6b" width="400" />
+    </td>
+  </tr>
+</table>
 
 
 
