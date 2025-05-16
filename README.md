@@ -8,7 +8,41 @@
 
 ## 2. 주요 내용
 - **프로젝트 기간**: YYYY-MM-DD ~ YYYY-MM-DD
-- **참여 인원**: [팀원 이름]
+<h2>팀원 소개</h2>
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/image1.png" width="120" /><br />
+      <b>김찬호</b><br />
+      <a href="https://github.com/kkch1012" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-kkch1012-181717?style=flat-square&logo=github&logoColor=white" />
+      </a>
+    </td>
+    <td align="center">
+      <img src="images/image2.png" width="120" /><br />
+      <b>서동겸</b><br />
+      <a href="https://github.com/whynotswdg" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-whynotswdg-181717?style=flat-square&logo=github&logoColor=white" />
+      </a>
+    </td>
+    <td align="center">
+      <img src="images/image3.png" width="120" /><br />
+      <b>이성재</b><br />
+      <a href="https://github.com/sungjae0309" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-sungjae0309-181717?style=flat-square&logo=github&logoColor=white" />
+      </a>
+    </td>
+    <td align="center">
+      <img src="images/image4.jpg" width="120" /><br />
+      <b>김민지</b><br />
+      <a href="https://github.com/kkuni-jjang" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-kkuni--jjang-181717?style=flat-square&logo=github&logoColor=white" />
+      </a>
+    </td>
+  </tr>
+</table>
+
 - **데이터 사용처**: [데이터 출처]
 
 ## 3. 일정 계획
