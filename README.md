@@ -11,33 +11,33 @@
 ## 2. 주요 내용
 - **프로젝트 기간**: 2025-04-05 ~ 2025-08-02
   
-<<h2>팀원 소개</h2>
+<h2 align="center">팀원 소개</h2>
 
-<table>
+<table align="center" width="100%">
   <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/b77fbacc-6bc4-4757-99ec-d52bc00d02d4" width="120" /><br />
+    <td align="center" width="200">
+      <img src="https://github.com/user-attachments/assets/b77fbacc-6bc4-4757-99ec-d52bc00d02d4" width="160" /><br />
       <b>서동겸</b><br />
       <a href="https://github.com/whynotswdg" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
     </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/e948675d-a30b-4121-9ec3-1bdbf41f3849" width="120" /><br />
+    <td align="center" width="200">
+      <img src="https://github.com/user-attachments/assets/e948675d-a30b-4121-9ec3-1bdbf41f3849" width="160" /><br />
       <b>김찬호</b><br />
       <a href="https://github.com/kkch1012" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
     </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/fe073da8-4e91-4475-bd27-111011ecebbd" width="120" /><br />
+    <td align="center" width="200">
+      <img src="https://github.com/user-attachments/assets/fe073da8-4e91-4475-bd27-111011ecebbd" width="160" /><br />
       <b>이성재</b><br />
       <a href="https://github.com/sungjae0309" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
       </a>
     </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/6f243740-f574-44e0-bb97-2fbbae396a5d" width="120" /><br />
+    <td align="center" width="200">
+      <img src="https://github.com/user-attachments/assets/6f243740-f574-44e0-bb97-2fbbae396a5d" width="160" /><br />
       <b>김민지</b><br />
       <a href="https://github.com/kkuni-jjang" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
@@ -45,6 +45,7 @@
     </td>
   </tr>
 </table>
+
 
 
 
