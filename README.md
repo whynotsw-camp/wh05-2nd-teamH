@@ -14,9 +14,9 @@
 
 - **🔧 주요 기능**:
   - 📊 **채용공고 분석**: 자연어 처리 기반 요구조건 추출
-  - 🤖 **맞춤 직무 추천**: 이력/기술 기반 AI 직무 매칭
+  - 🤖 **맞춤 직무 추천**: 사용자의 이력/기술 기반 AI 직무 매칭
   - 💼 **맞춤 공고 추천**: 관심 직무와 역량 기반 채용공고 추천
-  - 🗺 **개인별 취업 로드맵 제공**: 목표 직무에 따른 역량 단계별 제안
+  - 🗺 **개인별 취업 로드맵 제공**: 희망 직무에서 요구되는 역량을 단계별로 제안
 
 ---
 ## 2. 🗂 주요 내용
@@ -45,7 +45,7 @@
       <img src="https://github.com/user-attachments/assets/e948675d-a30b-4121-9ec3-1bdbf41f3849" width="160" /><br />
       <b>김찬호</b>
       <div style="margin:6px 0;">──────</div>
-      <i>Backend / Data Engineer / Data Scientist</i>
+      <i>Backend / Data Engineer<br />Data Scientist</i>
       <div style="margin:6px 0;">──────</div>
       <a href="https://github.com/kkch1012" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
