@@ -30,7 +30,7 @@
 
 <table align="center" width="100%">
   <tr>
-    <td align="center" width="200">
+    <td align="center" width="250">
       <img src="https://github.com/user-attachments/assets/b77fbacc-6bc4-4757-99ec-d52bc00d02d4" width="160" /><br />
       <b>서동겸(Team Leader)</b>
       <div style="margin:6px 0;">──────</div>
@@ -41,7 +41,7 @@
       </a>
     </td>
 
-  <td align="center" width="200">
+  <td align="center" width="250">
       <img src="https://github.com/user-attachments/assets/e948675d-a30b-4121-9ec3-1bdbf41f3849" width="160" /><br />
       <b>김찬호</b>
       <div style="margin:6px 0;">──────</div>
@@ -52,7 +52,7 @@
       </a>
     </td>
 
-  <td align="center" width="200">
+  <td align="center" width="250">
       <img src="https://github.com/user-attachments/assets/fe073da8-4e91-4475-bd27-111011ecebbd" width="160" /><br />
       <b>이성재</b>
       <div style="margin:6px 0;">──────</div>
@@ -63,7 +63,7 @@
       </a>
     </td>
 
-  <td align="center" width="200">
+  <td align="center" width="250">
       <img src="https://github.com/user-attachments/assets/6f243740-f574-44e0-bb97-2fbbae396a5d" width="160" /><br />
       <b>김민지</b>
       <div style="margin:6px 0;">──────</div>
