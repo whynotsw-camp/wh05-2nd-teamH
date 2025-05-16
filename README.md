@@ -219,14 +219,14 @@
 ## 📌 주요 화면 캡처
 
 <p align="center">
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/e71b1e39-f3f0-4232-b1eb-6f036d88d3de" />
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/5784514a-aeaf-4c70-88b0-27adbbe896d1" />
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/1f9431d7-f350-4184-bd48-c026fe3fde8a" />
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/bc6d8ec5-f0c8-4969-9fd9-38fb71d2b4b1" />
+  <img width="250" height="250" src="https://github.com/user-attachments/assets/b84e7341-a390-4e06-a775-df1df091da89" />
+  <img width="250" height="250" src="https://github.com/user-attachments/assets/291710bb-981d-4a1a-be6f-7befdc183d3e" />
+  <img width="250" height="250" src="https://github.com/user-attachments/assets/45c9fe4a-dd99-4e6f-90a3-c78108e3d7c0" />
+  <img width="250" height="250" src="https://github.com/user-attachments/assets/b2b640f8-a253-40f2-866d-fe3b5e7984f9" />
 </p>
 
 <p align="center">
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/baa95f5d-8928-48df-8f88-0f2187a56fde" />
+  <img width="250" height="250" src="https://github.com/user-attachments/assets/d946675c-8062-45da-bba0-b8ea968628c7" />
   <img width="250" height="250" src="https://github.com/user-attachments/assets/2718ace5-e16e-4d4a-a430-9b91c21cd8d7" />
   <img width="250" height="250" src="https://github.com/user-attachments/assets/4bd392d7-6245-4e2f-a658-83e6db388525" />
   <img width="250" height="250" src="https://github.com/user-attachments/assets/7032f2e9-f9f3-4633-a70d-8f6dce0fbdb5" />
@@ -236,6 +236,7 @@
   <img width="250" height="250" src="https://github.com/user-attachments/assets/d713daa2-a6a8-4dc9-893c-e443bd97d7c2" />
   <img width="250" height="250" src="https://github.com/user-attachments/assets/9f425df3-3752-4317-aba2-34824c23eb6b" />
 </p>
+
 
 
 
