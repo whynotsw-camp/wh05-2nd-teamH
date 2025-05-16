@@ -235,12 +235,6 @@
 <p align="center">
   <img width="250" height="250" src="https://github.com/user-attachments/assets/d713daa2-a6a8-4dc9-893c-e443bd97d7c2" />
   <img width="250" height="250" src="https://github.com/user-attachments/assets/9f425df3-3752-4317-aba2-34824c23eb6b" />
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/f70fd64d-e1a3-4d49-a984-f5a38a709c72" />
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/8530bb7c-8771-4e8d-89d0-0b3b62b7f1fd" />
-</p>
-
-<p align="center">
-  <img width="250" height="250" src="https://github.com/user-attachments/assets/ae5c295a-1704-449c-a68d-4e0c475d118d" />
 </p>
 
 
