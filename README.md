@@ -160,14 +160,14 @@
 ---------------------------
 # 📐 프로젝트 설계서
 
-## I. 🧱 데이터 아키텍처
+## I.  데이터 아키텍처
 
 ### 1. 설계 개요
 
 - **데이터 처리 방식:** 🌀 Batch 처리 (ELT: Extract, Load, Transform)
 - **데이터 수집:**  
   - 📡 채용 플랫폼 API 우선 사용  
-  - 🕸 웹 스크래핑 도구: Scrapy, Selenium, BeautifulSoup  
+  - 웹 스크래핑 도구: Scrapy, Selenium, BeautifulSoup  
   - 💡 Scrapy 우선, 동적 페이지는 Selenium 보완
 - **데이터 저장:**  
   - 🗂 **원시 데이터 (Data Lake):**  
@@ -178,7 +178,7 @@
 - **분석 및 처리:**  
   - ⚙️ Spark on AWS EMR  
   - 🔍 NLP(KeyBERT, KoBERT), 이상치 제거, 중복 제거  
-  - ⏱ Apache Airflow로 ELT 파이프라인 자동화 및 모니터링
+  -  Apache Airflow로 ELT 파이프라인 자동화 및 모니터링
 
 ### 2. 기술 스택
 
