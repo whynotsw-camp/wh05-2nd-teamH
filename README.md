@@ -143,77 +143,68 @@
 
 
 ---------------------------
+# 📐 프로젝트 설계서
 
-# 프로젝트 설계서
+## I. 🧱 데이터 아키텍처
 
-1.  **데이터 아키텍처**
-    * **설계 개요:**
-        * **데이터 처리 방식:** Batch 처리 (ELT: Extract, Load, Transform)
-        * **데이터 수집:** 채용 플랫폼 API를 우선하여 활용. API 미제공 시, 웹 스크래핑 도구(Python 기반 Scrapy, Selenium, BeautifulSoup)로 데이터 수집. 효율성을 위해 Scrapy를 우선하여 수집하고, 동적 웹 페이지 수집 시 Selenium을 사용.
-        * **데이터 저장:**
-            * **원시 데이터 (Data Lake):** 수집된 원시 데이터(텍스트, 이미지 등)는 AWS S3에 Parquet 또는 JSON 형식으로 저장됩니다. 이미지 파일 자체는 S3에 저장하고 관련 메타데이터를 Parquet 파일에 함께 기록.
-            * **변환된 데이터 (Data Warehouse):** 정제 및 변환 과정을 거친 데이터는 AWS Redshift(프로토타입 단계에서는 PostgreSQL 사용)에 저장되어 분석에 활용
-        * **분석 및 처리:** AWS EMR 상에서 Spark를 사용하여 대용량 데이터를 분산 처리. 이 과정에는 데이터 정제, 결측치 및 이상치 처리, 중복 제거, 자연어 처리(KeyBERT, KoBERT 등 활용으로 핵심 정보 추출 및 텍스트 벡터화), 기술 스택 표준화 포함. 전체 ELT 파이프라인의 워크플로우는 Apache Airflow로 모니터링 및 자동화.
+### 1. 설계 개요
 
-2.  **기술 스택**
-    * **데이터 수집:** Python (Scrapy, Selenium, BeautifulSoup, Requests), 채용 플랫폼 API
-    * **분석 및 처리:** AWS S3, Boto3, AWS EMR (Spark), Python, KeyBERT, KoBERT, AWS Redshift (프로토타입: PostgreSQL), Apache Airflow
-    * **시각화 (모니터링 및 로깅 중심):** 
+- **데이터 처리 방식:** 🌀 Batch 처리 (ELT: Extract, Load, Transform)
+- **데이터 수집:**  
+  - 📡 채용 플랫폼 API 우선 사용  
+  - 🕸 웹 스크래핑 도구: Scrapy, Selenium, BeautifulSoup  
+  - 💡 Scrapy 우선, 동적 페이지는 Selenium 보완
+- **데이터 저장:**  
+  - 🗂 **원시 데이터 (Data Lake):**  
+    - AWS S3에 Parquet 또는 JSON으로 저장  
+    - 이미지 = S3 / 메타데이터 = Parquet  
+  - 🧮 **변환된 데이터 (Data Warehouse):**  
+    - 정제 후 AWS Redshift에 저장 (프로토타입: PostgreSQL)
+- **분석 및 처리:**  
+  - ⚙️ Spark on AWS EMR  
+  - 🔍 NLP(KeyBERT, KoBERT), 이상치 제거, 중복 제거  
+  - ⏱ Apache Airflow로 ELT 파이프라인 자동화 및 모니터링
 
-## 3. 설계 이미지
-![아키텍처 다이어그램](../assets/architecture_diagram.png)
+### 2. 기술 스택
 
----------------------------
-
-# 🧩 데이터 연동 정의서
-
-## 1. 데이터 정의
-
-- **데이터 소스**: 채용 공고 (JobPosting 테이블)
-- **설명**: 외부 채용 사이트에서 수집된 공고 정보를 저장 및 분석하는 핵심 테이블입니다.
-
-| 컬럼 ID             | 설명             | 타입       | 제약조건              |
-|--------------------|------------------|------------|------------------------|
-| `posting_id`       | 공고 ID          | VARCHAR    | PK, NN                |
-| `company_id`       | 회사 ID          | VARCHAR    | FK → Company(company_id), NN |
-| `job_title`        | 직무명           | VARCHAR    | NN                    |
-| `required_expert`  | 필수 경력 수준   | VARCHAR    | NN                    |
-| `required_educ`    | 필수 학력        | VARCHAR    | NN                    |
-| `employment_type`  | 고용 형태        | VARCHAR    | NN                    |
-| `salary`           | 연봉             | VARCHAR    | NN                    |
-| `posting_date`     | 공고 게시일      | DATETIME   | NN                    |
-| `closing_date`     | 공고 마감일      | DATETIME   | NN                    |
-| `responsibilities` | 주요 업무        | TEXT       |                        |
-| `qualifications`   | 자격 요건        | TEXT       |                        |
-| `preferred_qual`   | 우대 사항        | TEXT       |                        |
-
-※ NN: Not Null / PK: Primary Key / FK: Foreign Key
+- **데이터 수집:** 🐍 Python (Scrapy, Selenium, Requests 등), 채용 API  
+- **분석/처리:** AWS S3, EMR, Redshift, Spark, KeyBERT, KoBERT, Airflow  
+- **시각화 및 로깅:** 📊 QuickSight, Airflow UI
 
 ---
 
-## 2. 연동 방식
+## II. 🔗 데이터 연동 정의서
 
-| 항목         | 설명                          |
-|--------------|-------------------------------|
-| 연동 방식    | Batch 수집                    |
-| 연동 대상    | 외부 채용공고 API 또는 크롤링 데이터 |
-| 연동 주기    | 매일 자정                     |
-| 적재 방식    | staging 테이블 → 정제 후 JobPosting 테이블로 이관 |
-| 예외 처리    | 마감일 경과 또는 필수값 누락 공고 제외 |
+### 1. 데이터 정의
 
+- **데이터 소스:**
+  - 🛰 채용 플랫폼 API  
+  - 🕸 채용 관련 웹사이트 스크래핑
+- **주요 컬럼 예시:**
+  - **채용공고:** 회사명, 직무, 요건, 우대사항, 기술스택, 마감일 등  
+  - **구직자:** 이름(암호화), 경력, 학력, 기술스택, 희망직무 등
 
---------------------------
+### 2. 연동 방식
 
-# 클라우드 아키텍처 설계서
+| 항목         | 설명                                                                 |
+|--------------|----------------------------------------------------------------------|
+| 연동 방식    | 🔁 Batch 수집                                                       |
+| 연동 대상    | 외부 채용공고 API, 크롤링 대상 웹사이트                             |
+| 연동 주기    | ⏰ 매일 자정 (공고 업데이트 정책에 따라 유동 조정)                 |
+| 적재 방식    | 🛠 Staging 테이블 → 전처리 후 통합 테이블로 이관                     |
+| 예외 처리    | 🚫 마감일 경과, 필수값 누락, 중복 공고 제외                          |
 
-## 1. 아키텍처 개요
-- **사용 서비스**:
-  - AWS S3: 데이터 저장소
-  - AWS Lambda: 데이터 처리
-  - AWS QuickSight: 대시보드
+---
 
-## 2. 설계 이미지
-![클라우드 아키텍처 다이어그램](../assets/architecture_diagram.png)
+## III. ☁️ 클라우드 아키텍처 설계서
+
+### 1. 아키텍처 개요
+
+- **사용 서비스 (AWS 중심):**
+  - 🗃 **데이터 저장:** AWS S3  
+  - ⚙️ **처리 및 분석:** Apache Spark (EMR), Redshift or PostgreSQL  
+  - 📊 **워크플로우:** Apache Airflow (AWS MWAA)  
+  - 🚀 **배포 및 인프라:** Docker, GitHub Actions, Jenkins, EC2, IAM, VPC 등
 
 -------------------------
 
