@@ -16,7 +16,7 @@
       <img src="images/image1.png" width="120" /><br />
       <b>김찬호</b><br />
       <a href="https://github.com/kkch1012" target="_blank">
-        <img src="https://img.shields.io/badge/GitHub-kkch1012-181717?style=flat-square&logo=github&logoColor=white" />
+        <img src="[https://img.shields.io/badge/GitHub-kkch1012-181717?style=flat-square&logo=github&logoColor=white](https://github.com/user-attachments/assets/e948675d-a30b-4121-9ec3-1bdbf41f3849)" />
       </a>
     </td>
     <td align="center">
