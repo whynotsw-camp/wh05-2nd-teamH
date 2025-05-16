@@ -11,7 +11,7 @@
 ## 2. 주요 내용
 - **프로젝트 기간**: 2025-04-05 ~ 2025-08-02
   
-<h2>팀원 소개</h2>
+<<h2>팀원 소개</h2>
 
 <table>
   <tr>
@@ -37,7 +37,7 @@
       </a>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/ac2a764e-a4e4-429e-a043-534e9dff4e3b" width="120" /><br />
+      <img src="https://github.com/user-attachments/assets/6f243740-f574-44e0-bb97-2fbbae396a5d" width="120" /><br />
       <b>김민지</b><br />
       <a href="https://github.com/kkuni-jjang" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
@@ -45,6 +45,7 @@
     </td>
   </tr>
 </table>
+
 
 
 
