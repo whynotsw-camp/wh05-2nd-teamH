@@ -227,6 +227,13 @@
 
 # 🖥 화면 구성
 
+## 🎬 시연 영상
+
+[![시연 영상 바로 보기](https://img.youtube.com/vi/SOFaN2uuX6A/0.jpg)](https://youtu.be/SOFaN2uuX6A?si=tfUmHJDmbQaMv3Cb)
+
+> 📺 클릭 시 유튜브에서 전체 시연 영상을 확인할 수 있습니다.
+
+---
 ## 📌 주요 화면 캡처
 
 <table align="center">
