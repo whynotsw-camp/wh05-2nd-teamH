@@ -199,7 +199,9 @@
 - **데이터 수집:** 🐍 Python (Scrapy, Selenium, Requests 등), 채용 API  
 - **분석/처리:** AWS S3, EMR, Redshift, Spark, KeyBERT, KoBERT, Airflow  
 - **시각화 및 로깅:** 📊 QuickSight, Airflow UI
-  
+
+### 3. 설계 이미지
+
 <img width="1169" alt="Image" src="https://github.com/user-attachments/assets/0cd94871-fd74-45c3-af60-1e7966f0266e" />
 
 ---
