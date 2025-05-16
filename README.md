@@ -201,6 +201,7 @@
 - **시각화 및 로깅:** 📊 QuickSight, Airflow UI
   
 <img width="1169" alt="Image" src="https://github.com/user-attachments/assets/0cd94871-fd74-45c3-af60-1e7966f0266e" />
+
 ---
 
 ## II. 🔗 데이터 연동 정의서
